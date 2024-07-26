@@ -143,7 +143,6 @@ ul li:hover {
   justify-content: center;
   align-items: center;
   transform: scale(1.2);
-  z-index: 11;
 }
 .cityName{
   position: absolute;
