@@ -13,7 +13,7 @@ let city = document.querySelector(".cityName");
 let URL = 'https://api.postalpincode.in/pincode/';
 let isVis = false;
 let isVis2 = false;
-searchBtn.addEventListener("click",async()=>{
+async function getData() {
    let pincode = parseInt(input.value);
    if(pincode >=0) {
             try{
@@ -49,6 +49,14 @@ searchBtn.addEventListener("click",async()=>{
       alert("enter a valid pincode");
    }
    input.value="";
+}
+window.addEventListener("keypress",(e)=>{
+   if(e.key === "Enter") {
+      getData();
+   }
+})
+searchBtn.addEventListener("click",()=>{
+   getData();
 })
 window.onload =()=>{
    logo.style.animation = "nav 800ms ease-out";
