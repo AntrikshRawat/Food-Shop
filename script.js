@@ -13,7 +13,7 @@ let city = document.querySelector(".cityName");
 let URL = 'https://api.postalpincode.in/pincode/';
 let isVis = false;
 let isVis2 = false;
-async function getData() {
+let getData =async() =>{
    let pincode = parseInt(input.value);
    if(pincode >=0) {
             try{
